@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 
+	//Array
 	var arr [3]int
 	arr[0] = 1
 	arr[1] = 5
@@ -13,6 +14,7 @@ func main() {
 	newArr := [3]int{5, 6, 7}
 	fmt.Println(newArr)
 
+	//Slice
 	var slice = arr[:]
 	fmt.Println(slice)
 	var slice1 = []int{1, 2, 3}
@@ -23,4 +25,12 @@ func main() {
 	s3 := slice1[:2]
 	s4 := slice1[1:2]
 	fmt.Println(s2, s3, s4)
+
+	//Map
+	m := map[string]string{"force": "Yoda"}
+	fmt.Println(m["force"])
+	m["force"] = "Vader"
+	fmt.Println(m["force"])
+	delete(m, "force")
+	fmt.Println(m)
 }
