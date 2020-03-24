@@ -1,12 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/shishanksingh2015/GoWebService/models"
+)
 
 func main() {
-	fmt.Println("Hello, Padwan you are,", getName())
-
-}
-
-func getName() string {
-	return "Yoda is that you!!!!!!"
+	u := models.User{
+		ID:        2,
+		FirstName: "Darth",
+		LastName:  "Vader",
+	}
+	fmt.Println(u)
 }
