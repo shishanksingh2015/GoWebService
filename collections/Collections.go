@@ -33,4 +33,20 @@ func main() {
 	fmt.Println(m["force"])
 	delete(m, "force")
 	fmt.Println(m)
+
+	//Struct
+
+	type jedi struct {
+		ID        int
+		firstName string
+		lastName  string
+		force     string
+	}
+	var j jedi
+	j.ID = 1
+	j.firstName = "Luke"
+	j.lastName = "Skywalker"
+	j.force = "Light Side"
+
+	fmt.Println(j)
 }
