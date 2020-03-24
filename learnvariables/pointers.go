@@ -2,6 +2,17 @@ package main
 
 import "fmt"
 
+const (
+	first  = iota
+	second = iota
+	third
+	//iota get increment everytime
+)
+const (
+	//iota resets in every const blocl
+	fourth = iota
+)
+
 func main() {
 	const url = "www.darkforce.com"
 	const c int = 2
@@ -18,4 +29,5 @@ func main() {
 	fmt.Println(url)
 	fmt.Println(float32(c) + 4.2)
 	fmt.Println(c + 4)
+	fmt.Println(first, second, third, fourth)
 }
