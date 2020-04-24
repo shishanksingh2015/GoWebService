@@ -1,12 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"net/http"
+
+	"github.com/shishanksingh2015/GoWebService/controllers"
+)
 
 func main() {
-	fmt.Println("Hello, Padwan you are,", getName())
-
-}
-
-func getName() string {
-	return "Yoda is that you!!!!!!"
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
 }
